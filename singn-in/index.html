@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+        html {
+            background-color: rgb(0, 0, 0);
+        }
+        .text{
+            margin-bottom: 100px;
+        }
+        .text h1{
+            color: #e8eeef;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        form {
+            box-shadow: 1px 12px 50px white;
+            margin-top: 90px;
+            max-width: 300px;
+            margin: 20px auto;
+            margin-left: 471px;
+            padding: 60px 60px;
+            background: #f4f7f8;
+            border-radius: 8px;
+            width: 890px;
+        }
+
+        h1 {
+            margin: 0 0 30px 0;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        textarea,
+        select {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            font-size: 16px;
+            height: auto;
+
+            margin: 0;
+            outline: 0;
+            padding: 15px;
+            width: 100%;
+            background-color: #e8eeef;
+            color: #8a97a0;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+            margin-bottom: 30px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 0 4px 8px 0;
+        }
+
+        select {
+            padding: 6px;
+            height: 32px;
+            border-radius: 2px;
+        }
+
+        button {
+            padding: 19px 39px 18px 39px;
+            color: #FFF;
+            background-color: #28352c;
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            border-radius: 5px;
+            width: 100%;
+            border: 1px solid #3ac162;
+            border-width: 1px 1px 3px;
+            box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+            margin-bottom: 10px;
+        }
+
+        fieldset {
+            margin-bottom: 30px;
+            border: none;
+        }
+
+        legend {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        label.light {
+            font-weight: 300;
+            display: inline;
+        }
+
+        .number {
+            background-color: #242b26;
+            color: #fff;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            font-size: 0.8em;
+            margin-right: 4px;
+            line-height: 30px;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+            border-radius: 100%;
+            max-width: 480px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        <h1 class="dani">If you are member of T.plinks then sing-in</h1>
+        <h1 class="dani">and enjoy our unlimted content</h1>
+    </div>
+    <form action="Let Us C  (1) (1).pdf" method="post">
+        <div>
+            <input type="text" name="username" placeholder="Entre your userman">
+            <span></span>
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Entre your password">
+            <span></span>
+        </div>
+        <button id="log-in" translate="yes">Log in</button>
+    </form>
+    <script type="text/javascript">
+        window.onload = () => {
+            this.sessionStorage.setItem("username", "Billy")
+            this.sessionStorage.setItem("password", "Willy")
+
+        }
+        var input = document.getElementsByTagName('input');
+        var login = document.getElementById('log-in');
+        var form = document.querySelector('form');
+        form.onsubmit = () => { return false }
+        login.onclick = () => {
+            if ((input[0].value != "") && (input[1].value != "")) {
+                if ((input[0].value == sessionStorage.getItem("username")) && (input[1].value == sessionStorage.getItem("password"))) {
+                    form.onsubmit = () => { return 1 }
+                    document.cookie = "username" + input[0].value;
+                    document.cookie = "password" + input[0].value;
+                }
+                else {
+                    if ((input[0].value != sessionStorage.getItem("username"))) {
+                        input[0].nextElementSibling.textContent = "Username is NOT match";
+                        setTimeout(() => {
+                            input[0].nextElementSibling.textContent = "";
+                        }, 2000);
+                    }
+
+                    if ((input[1].value != sessionStorage.getItem("password"))) {
+                        input[1].nextElementSibling.textContent = "Password is NOT match";
+                        setTimeout(() => {
+                            input[1].nextElementSibling.textContent = "";
+                        }, 2000);
+                    }
+                }
+            }
+            else {
+                if (input[0].value == "") {
+                    input[0].nextElementSibling.textContent = "Username is empty ";
+                    setTimeout(() => {
+                        input[0].nextElementSibling.textContent = "";
+                    }, 2000);
+                }
+                if (input[1].value == "") {
+                    input[1].nextElementSibling.textContent = "Passord is empty ";
+                    setTimeout(() => {
+                        input[1].nextElementSibling.textContent = "";
+                    }, 2000);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML</title>
+<style>	
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Quintessential&display=swap');
+ .section-service{
+   row-gap: 90px;
+   transition: all 0.7s linear;
+ }
+.section-service{
+  margin-left: 150px;
+  margin-right: 89px;
+  max-width: 60rem;
+}
+.section-service .grid{
+  margin-top: 10rem;
+  row-gap: 780rem;
+}
+.service-box p{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.service-box{
+    box-shadow:2px 8px #535252;
+	  flex: 33.33%;
+	  height: 300px;
+    transition:all 0.2s linear;
+    border-radius: 5px;
+	  margin: 5px;
+	  text-align: center;
+    border-radius: 5px;
+}
+.service-box:hover,.service-box:active{
+  transform: translateY(-3rem);
+}
+.container {
+	display: flex;
+}	
+.service-icon{
+  width: 2rem;
+  height: 2rem;
+  background-color: #e1fcfc;
+  display: inline-block;
+  border-radius: 51% 49% 0% 100% / 0% 0% 100% 100% ;
+  padding: 1.4rem 1.8rem;
+  position: relative;
+  animation: water-wave 3s linear infinite;
+}
+.service-icon::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translateY(-50%,-50%);
+  background: transparent;
+  border: 1px solid black;
+}
+@keyframes water-wave {
+  0%{
+    border-radius: 35% 65% 22% 78% / 68% 33% 67% 32% ;
+  }
+  50%{
+    border-radius: 55% 45% 68% 32% / 50% 32% 68% 50% ;
+  }
+  100%{
+    border-radius:35% 65% 22% 78% / 68% 33% 67% 32% ;
+  }
+}
+</style>
+</head>  
+<body>
+<section class="section section-service">
+	<div class="container">
+	   <div class="service-box">
+      <ion-icon name="desktop" class="service-icon"></ion-icon>
+	    <h2> First column </h2>
+		 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, quo nobis? Repellat sunt corrupti, animi inventore officiis aperiam amet officia eaque nesciunt iusto quisquam nulla. Nulla fugiat distinctio neque cum.</p>
+	   </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   <div class="service-box">
+      <ion-icon name="logo-apple" class="service-icon"></ion-icon>
+	     <h2> second column </h2>
+		 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam velit nesciunt voluptatum asperiores cum, provident perspiciatis ipsam maxime explicabo quam! Error, quae beatae optio cum expedita odit voluptates magni doloremque!</p>
+	   </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   <div class="service-box">
+      <ion-icon name="logo-android"   class="service-icon"></ion-icon>
+	     <h2> Third column </h2>
+		 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet nemo veniam doloribus quod quae dicta veritatis mollitia tenetur voluptates distinctio magnam, illum laudantium corporis unde, nobis aperiam. Qui, alias dignissimos.</p>
+	   </div>
+	</div>
+</section>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>
