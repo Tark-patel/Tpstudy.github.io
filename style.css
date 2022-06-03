@@ -114,14 +114,6 @@ main{
   font-size: 25px ;
 }
 
-.container1{
-  height: 100vh;
-  margin-bottom: 71px;
-  margin-top: -640px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
 .container1 a{
   margin-top: 9px;
   text-decoration: none;
@@ -133,8 +125,8 @@ main{
 .container2{
   width: 100%;
   height: 100vh;
-  margin-top: -693px;
-  margin-bottom: -200px;
+  margin-top: -623px;
+  margin-bottom: -100px;
   display: flex;
   justify-content: right;
   align-items: center;
@@ -535,7 +527,7 @@ margin-bottom: 20px;
   align-items: center;
 }
 .service-box{
-   box-shadow:2px 8px #535252;
+   box-shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);;
    flex: 33.33%;
    height: 300px;
    transition:all 0.2s linear;
@@ -558,6 +550,7 @@ margin-bottom: 20px;
 }
 .Service{
  display: flex;
+
 }	
 .service-icon{
  width: 2rem;
@@ -790,40 +783,110 @@ ul{
 
 /*media query by tp*/
 @media screen and (max-width: 400px) {
+
   nav .links a {
     font-size: 9px;
     display: flex;
+    background-color: #ffffff;
     justify-content: center;
     overflow: hidden;
     margin-top: -2px;
 
   }
-  main .navigation h5{
+  nav h2{
+    margin-left: 150px;
+  }
+  nav{
+    height: 60px;
+  }
+  main{
+    
+    background-image: url('https://3.bp.blogspot.com/-3UcLXxRcetg/WaTYDnjaJbI/AAAAAAAADt0/LL7OaZTjsE4hTzpKkm-Jj55c8JI4SZBhQCK4BGAYYCw/s1600/head-back.jpg');
+    border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%;
+    margin-top: -80px;
+  }
+  main h1{
+    margin-top: 30px;
     text-align: center;
-    font-size: 1.75rem;
+    color: gold;
+  }
+  main h2{
+    display: flex;
+    color: goldenrod;
+    justify-content: center;
+  }
+  main p{
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    font-size: 15px;
+    margin-left: 20px;
+    max-width: 330px;
+  }
+  main .contact{
+    margin-left: 60px;
   }
   main .navigation .jumbotron-heading{
     font-size: 1.90rem;
   }
-  main .info{
-    background-color: #fff;
-    margin-bottom: -20px;
+  .info{
+    margin-top: 90px;
+    margin-left: -40px;
+    color: rgb(0, 0, 0);
   }
-  main .info .content .button{
-    width: 1px;
+  /* service card*/
+
+  .Service{
+    margin-left: -210px;
+
   }
-  main .info .content .button2{
-    width: 1px;
+  .section-service{
+    row-gap: 90px;
+    transition: all 0.7s linear;
   }
-  main .info .content .button3{
-    width: 1px;
-  } 
-  main .info .content .button1{
-    width: 1px;
-  }
-  main .video  iframe{
-    width: 320px;   
-  }
+ .section-service{
+   margin-left: 150px;
+   margin-right: 89px;
+
+ }
+ 
+ .service-box{
+     box-shadow:2px 8px #535252;
+     flex: 33.33%;
+     height: 300px;
+     transition:all 0.2s linear;
+     border-radius: 5px;
+     margin: 5px;
+     text-align: center;
+     border-radius: 5px;
+ }
+ .service-box:hover,.service-box:active{
+   transform: translateY(-3rem);
+ }
+ 
+ .service-icon{
+   width: 2rem;
+   height: 2rem;
+   background-color: #e1fcfc;
+   display: inline-block;
+   border-radius: 51% 49% 0% 100% / 0% 0% 100% 100% ;
+   padding: 1.4rem 1.8rem;
+   position: relative;
+   animation: water-wave 3s linear infinite;
+ }
+ .service-icon::after{
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+ 
+   transform: translateY(-50%,-50%);
+   background: transparent;
+   border: 1px solid black;
+ }
+
+  /* service card end*/
+  /*card*/
   .box{
 		width: 94%;
 		height: 500px;
@@ -834,32 +897,19 @@ ul{
 	.details p{
 		font-size: 16px;
 		width: 250px;
+    margin-top: -90px;
 	} 
-  .container1{
-    margin-top: 0px;
-    background-color: #a4152c;
-  }
+
   .container2{
     margin-top: -1px;
-    background-color: #fff;
+    background-color: aliceblue;
   }
-  nav h2{
-    margin-left: 100px;
-  }
-  nav{
-    height: 60px;
-  }
+
   main h1{
     font-size: 31px;
     margin-top: -20px;
     margin-left:40px;
   }
-  main h2{
-    margin-left: 40px;
-    font-size: 35px;
-  }
-  main .contact{
-    margin-left: 100px;
-  }
+
 
 }
